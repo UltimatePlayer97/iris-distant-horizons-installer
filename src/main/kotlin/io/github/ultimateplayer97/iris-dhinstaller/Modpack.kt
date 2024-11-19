@@ -29,11 +29,11 @@ class Modpack(val id: String) {
         ?.readBytes()
         ?.toBase64()
         ?.prefix("data:image/png;base64,")
-    val supportedMcVersions = buildSet {
-        for ((key, value) in versions) {
-            if (value.values.asSequence().flatMap { it.values }.any(PackVersion::isSupported)) {
-                add(key)
-            }
-        }
-    }
+//    val supportedMcVersions = buildSet {
+//        for ((key, value) in versions) {
+//            if (value.values.asSequence().flatMap { it.values }.any(PackVersion::isSupported)) {
+//                add(key)
+//            }
+//        }
+//    }
 }

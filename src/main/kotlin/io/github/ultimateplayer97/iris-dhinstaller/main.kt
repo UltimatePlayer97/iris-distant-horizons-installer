@@ -66,7 +66,7 @@ fun main() {
                     ?.forEach(packVersion::addItem)
                 selectedPack.versions[gameVersion]
                     ?.entries
-                    ?.first { it.value.values.any(PackVersion::isSupported) }
+                    ?.first { it.value.isNotEmpty() }
                     ?.let { packVersion.selectedItem = it.key }
             }
         }
@@ -79,20 +79,20 @@ fun main() {
             loaderSelector.removeAllItems()
             for ((loader, version) in loaders) {
                 if (loader == Loader.NEOFORGE) continue // Skip NeoForge
-                if (version.isSupported || includeUnsupportedMinecraft.isSelected) {
-                    loaderSelector.addItem(loader.name.lowercase().capitalize())
-                }
+//                if (version.isSupported || includeUnsupportedMinecraft.isSelected) {
+//                    loaderSelector.addItem(loader.name.lowercase().capitalize())
+//                }
             }
         }
         fun setupMinecraftVersions() {
             val mcVersion = minecraftVersion.selectedItem
             minecraftVersion.removeAllItems()
             val all = includeUnsupportedMinecraft.isSelected
-            val supported = selectedPack.supportedMcVersions
+//            val supported = selectedPack.supportedMcVersions
             selectedPack.versions
                 .keys
                 .asSequence()
-                .filter { all || it in supported }
+                .filter { all }
                 .forEach(minecraftVersion::addItem)
             if (mcVersion != null) {
                 minecraftVersion.selectedItem = mcVersion
