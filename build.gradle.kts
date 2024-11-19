@@ -7,11 +7,11 @@ plugins {
     id("de.undercouch.download") version "5.6.0"
 }
 
-group = "io.github.gaming32"
-version = "1.0.3"
+group = "io.github.ultimateplayer97"
+version = "0.0.1-ALPHA"
 
 application {
-    mainClass.set("io.github.gaming32.additiveinstaller.MainKt")
+    mainClass.set("io.github.ultimateplayer97.MainKt")
 }
 
 repositories {
