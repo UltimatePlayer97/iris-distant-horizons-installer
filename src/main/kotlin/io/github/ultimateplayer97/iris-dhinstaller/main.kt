@@ -53,7 +53,7 @@ fun main() {
         val iconLabel = JLabel(ImageIcon(selectedPack.image))
 
         val minecraftVersion = JComboBox<String>()
-        val includeUnsupportedMinecraft = JCheckBox(I18N.getString("include.unsupported.minecraft"))
+//        val includeUnsupportedMinecraft = JCheckBox(I18N.getString("include.unsupported.minecraft"))
         val packVersion = JComboBox<String>()
         val loaderSelector = JComboBox<String>()
 
@@ -87,12 +87,12 @@ fun main() {
         fun setupMinecraftVersions() {
             val mcVersion = minecraftVersion.selectedItem
             minecraftVersion.removeAllItems()
-            val all = includeUnsupportedMinecraft.isSelected
+//            val all = includeUnsupportedMinecraft.isSelected
 //            val supported = selectedPack.supportedMcVersions
             selectedPack.versions
                 .keys
                 .asSequence()
-                .filter { all }
+//                .filter { all }
                 .forEach(minecraftVersion::addItem)
             if (mcVersion != null) {
                 minecraftVersion.selectedItem = mcVersion
@@ -100,7 +100,7 @@ fun main() {
         }
         setupMinecraftVersions()
 
-        includeUnsupportedMinecraft.addActionListener { setupMinecraftVersions() }
+//        includeUnsupportedMinecraft.addActionListener { setupMinecraftVersions() }
 
         val installProgress = JProgressBar().apply {
             isStringPainted = true
@@ -174,7 +174,7 @@ fun main() {
 
         enableOptions = {
             minecraftVersion.isEnabled = it
-            includeUnsupportedMinecraft.isEnabled = it
+//            includeUnsupportedMinecraft.isEnabled = it
             packVersion.isEnabled = it
             loaderSelector.isEnabled = it
             installationDir.isEnabled = it
@@ -194,7 +194,7 @@ fun main() {
             add(Box.createVerticalStrut(15))
             add(minecraftVersion.withLabel(I18N.getString("minecraft.version")))
             add(Box.createVerticalStrut(5))
-            add(includeUnsupportedMinecraft.withLabel())
+//            add(includeUnsupportedMinecraft.withLabel())
             add(Box.createVerticalStrut(15))
             add(packVersion.withLabel(I18N.getString("pack.version")))
             add(Box.createVerticalStrut(5))
