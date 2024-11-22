@@ -28,7 +28,6 @@ class PackVersion(val modpack: Modpack, val data: JsonObject) {
     val launcherFolderPath = "${modpack.id}/$packVersion-$gameVersion-$loader"
     val launcherVersionId = "${modpack.id}-$packVersion-$gameVersion-$loader"
     val launcherProfileId = "${modpack.id}-$gameVersion-$loader"
-//    val isSupported = data["featured"].asBoolean
 
     fun install(destination: Path, progressHandler: ProgressHandler) =
         PackInstaller(this, destination, progressHandler)

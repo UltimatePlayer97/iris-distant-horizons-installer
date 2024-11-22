@@ -9,7 +9,7 @@ enum class Loader(
     val addMods: (Version) -> Pair<String, String>
 ) {
     FABRIC("fabric-loader", "https://meta.fabricmc.net/v2", { Pair("fabric.addMods", "") }),
-    NEOFORGE("neoforge", "https://maven.neoforged.net", { Pair("neoforge.addMods", "") });
+    NEOFORGE("neoforge", "https://maven.neoforged.net", { Pair("neoforge.addMods", "") }); // TODO: Add Neoforge support
 
     override fun toString() = name.lowercase()
 }
