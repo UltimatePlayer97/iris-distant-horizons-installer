@@ -19,7 +19,7 @@ The **Iris Distant Horizons Installer** is a simple and user-friendly tool to in
 
 ### Requirements
 1. An internet connection (should be common sense but might as well put it here)
-2. A JRE (Java Runtime Envrionment) installed on your machine, if you do not have one installed get one from [here](https://adoptium.net/temurin/releases/)
+2. A JRE (Java Runtime Envrionment) installed on your machine, if you do not have one installed get one from [here](https://adoptium.net/temurin/releases/?packages=jre)
 
 Note: if the JAR file does not open with Java (example WinRAR, 7zip or Notepad), you may use [Jarfix](https://johann.loefflmann.net/downloads/jarfix.exe) to fix the .jar association on Windows machines.
 
