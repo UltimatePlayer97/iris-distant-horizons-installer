@@ -40,3 +40,4 @@ class JProgressBarProgressHandler(private val bar: JProgressBar) : ProgressHandl
         bar.string = I18N.getString("done")
     }
 }
+

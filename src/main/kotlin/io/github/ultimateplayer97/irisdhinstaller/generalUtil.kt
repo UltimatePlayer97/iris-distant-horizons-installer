@@ -120,3 +120,4 @@ fun ResourceBundle.getString(key: String, vararg args: Any?) = FORMAT.get().let 
     it.applyPattern(getString(key))
     it.format(args)!!
 }
+

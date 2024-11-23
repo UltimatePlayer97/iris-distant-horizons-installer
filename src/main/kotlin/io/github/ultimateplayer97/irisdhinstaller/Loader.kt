@@ -12,3 +12,4 @@ enum class Loader(
 
     override fun toString() = name.lowercase()
 }
+

@@ -33,3 +33,4 @@ class PackVersion(val modpack: Modpack, val data: JsonObject) {
         PackInstaller(this, destination, progressHandler)
             .use(PackInstaller::install)
 }
+

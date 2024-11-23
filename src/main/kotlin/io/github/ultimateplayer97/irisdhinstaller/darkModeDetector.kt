@@ -53,3 +53,4 @@ private fun query(cmd: String) = try {
     logger.error(e) { "Exception caught while querying the OS" }
     ""
 }
+

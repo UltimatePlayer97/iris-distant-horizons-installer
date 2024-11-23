@@ -10,6 +10,7 @@ plugins {
 group = "io.github.ultimateplayer97"
 version = "1.0.0"
 
+
 application {
     mainClass.set("io.github.ultimateplayer97.irisdhinstaller.MainKt")
 }

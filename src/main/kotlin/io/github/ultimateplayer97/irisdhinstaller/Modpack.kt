@@ -30,3 +30,4 @@ class Modpack(val id: String) {
         ?.toBase64()
         ?.prefix("data:image/png;base64,")
 }
+
