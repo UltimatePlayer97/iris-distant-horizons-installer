@@ -8,12 +8,11 @@ plugins {
 }
 
 group = "io.github.ultimateplayer97"
-version = "0.0.1-ALPHA"
+version = "1.0.0"
 
 application {
-    mainClass.set("io.github.ultimateplayer97.MainKt")
+    mainClass.set("io.github.ultimateplayer97.irisdhinstaller.MainKt")
 }
-
 repositories {
     mavenCentral()
 }

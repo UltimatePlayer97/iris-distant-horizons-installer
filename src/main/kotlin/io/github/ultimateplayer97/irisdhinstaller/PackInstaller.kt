@@ -1,4 +1,4 @@
-package io.github.ultimateplayer97.`iris-dhinstaller`
+package io.github.ultimateplayer97.irisdhinstaller
 
 import com.google.common.jimfs.Configuration
 import com.google.common.jimfs.Jimfs

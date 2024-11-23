@@ -1,4 +1,4 @@
-package io.github.ultimateplayer97.`iris-dhinstaller`
+package io.github.ultimateplayer97.irisdhinstaller
 
 import com.google.gson.JsonElement
 import java.util.*

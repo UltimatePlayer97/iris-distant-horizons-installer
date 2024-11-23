@@ -1,4 +1,4 @@
-package io.github.ultimateplayer97.`iris-dhinstaller`
+package io.github.ultimateplayer97.irisdhinstaller
 
 interface ProgressHandler {
     fun prepareNewTaskSet(prepareMessage: String)
