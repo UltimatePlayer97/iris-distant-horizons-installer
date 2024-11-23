@@ -17,6 +17,12 @@ The **Iris Distant Horizons Installer** is a simple and user-friendly tool to in
 1. Download the latest release from the [Releases](https://github.com/yourusername/iris-distant-horizons-installer/releases) page.
 2. Run the installer and follow the on-screen instructions to install the modpack.
 
+### Requirements
+1. An internet connection (should be common sense but might as well put it here)
+2. A JRE (Java Runtime Envrionment) installed on your machine, if you do not have one installed get one from [here](https://adoptium.net/temurin/releases/)
+
+Note: if the JAR file does not open with Java (example WinRAR, 7zip or Notepad), you may use [Jarfix](https://johann.loefflmann.net/downloads/jarfix.exe) to fix the .jar association on Windows machines.
+
 ---
 
 ## Acknowledgements
