@@ -14,7 +14,7 @@ The **Iris Distant Horizons Installer** is a simple and user-friendly tool to in
 ---
 
 ## Installation
-1. Download the latest release from the [Releases](https://github.com/yourusername/iris-distant-horizons-installer/releases) page.
+1. Download the latest release from the [Releases](https://github.com/UltimatePlayer97/iris-distant-horizons-installer/releases) page.
 2. Run the installer and follow the on-screen instructions to install the modpack.
 
 ### Requirements
