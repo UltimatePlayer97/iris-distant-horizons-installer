@@ -52,7 +52,7 @@ fun Component.withLabel(label: String? = null) = JPanel().apply {
 fun request(url: String): InputStream {
     logger.info { "Requesting $url" }
     val cnxn = URL(url).openConnection()
-    cnxn.setRequestProperty("User-Agent", "Additive Installer/$VERSION")
+    cnxn.setRequestProperty("User-Agent", "Iris + Distant Horizons Installer/$VERSION")
     return cnxn.getInputStream()
 }
 
@@ -65,7 +65,7 @@ fun requestCriticalJson(url: String) = try {
     JOptionPane.showMessageDialog(
         null,
         I18N.getString("modrinth.access.failed"),
-        "Additive Installer",
+        "Iris + Distant Horizons Installer",
         JOptionPane.ERROR_MESSAGE
     )
     exitProcess(1)
