@@ -1,5 +1,30 @@
 # Iris Distant Horizons Installer
 
+<a href="https://modrinth.com/modpack/additive">
+<img alt="additive" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/built-with/additive_vector.svg">
+</a>
+<br>
+
+<a href="https://modrinth.com/modpack/distant-horizons-iris-shaders">
+<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
+</a>
+<a href="https://modrinth.com/modpack/distant-horizons-iris-shaders/gallery">
+<img alt="modrinth-gallery" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/modrinth-gallery_vector.svg">
+</a>
+<br>
+
+<picture>
+<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">
+</picture>
+<picture>
+<img alt="neoforge" height="56" src="https://raw.githubusercontent.com/intergrav/devins-badges/8494ec1ac495cfb481dc7e458356325510933eb0/assets/cozy/supported/neoforge_vector.svg">
+</picture>
+<picture>
+<img alt="forge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/unsupported/forge_vector.svg">
+</picture>
+<br>
+<br>
+
 The **Iris Distant Horizons Installer** is a simple and user-friendly tool to install the [Distant Horizons - Iris Shaders](https://modrinth.com/mod/distant-horizons-iris-shaders) modpack. This project simplifies the installation process, ensuring that Minecraft players can easily set up and enjoy the feeling of seeing further then 32 chunks.
 
 ---
