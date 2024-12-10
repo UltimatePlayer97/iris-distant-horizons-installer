@@ -5,6 +5,10 @@
 </a>
 <br>
 
+
+<a href="https://www.curseforge.com/minecraft/modpacks/distant-horizons-iris-shaders">
+<img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg">
+</a>
 <a href="https://modrinth.com/modpack/distant-horizons-iris-shaders">
 <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
 </a>
