@@ -37,7 +37,6 @@ The **Iris Distant Horizons Installer** is a simple and user-friendly tool to in
 - Support for multiple Minecraft versions.
 - Integration with [Modrinth](https://modrinth.com/) for fetching modpack updates.
 - Sleek and modern graphical user interface (GUI).
-- Built-in support for popular mod loaders like Fabric and NeoForge (NeoForge doesn't really work right now).
 - [Soon] Ability to choose a terrain mod upon install
 
 ---
