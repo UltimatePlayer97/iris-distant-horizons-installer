@@ -32,6 +32,10 @@
 The **Iris Distant Horizons Installer** is a simple and user-friendly tool to install the [Distant Horizons - Iris Shaders](https://modrinth.com/mod/distant-horizons-iris-shaders) modpack. This project simplifies the installation process, ensuring that Minecraft players can easily set up and enjoy the feeling of seeing further then 32 chunks.
 
 ---
+To celebrate the release of Distant Horizons 2.3, we have partnered up with Spark Hosting!  
+
+[![banner](https://github.com/user-attachments/assets/d88729ec-aa1d-4bff-9455-26b2752b84c7)](https://billing.sparkedhost.com/aff.php?aff=2767)
+---
 
 ## Features
 - Support for multiple Minecraft versions.
