@@ -54,7 +54,6 @@ fun main() {
 
         val minecraftVersion = JComboBox<String>()
         val packVersion = JComboBox<String>()
-        val loaderSelector = JComboBox<String>()
 
         minecraftVersion.apply {
             addItemListener {
@@ -75,11 +74,6 @@ fun main() {
             val selectedVersion = packVersion.selectedItem as? String ?: return@addItemListener
             val loaders = selectedPack.versions[gameVersion]
                 ?.get(selectedVersion) ?: return@addItemListener
-            loaderSelector.removeAllItems()
-            for ((loader, version) in loaders) {
-                if (loader == Loader.NEOFORGE) continue // Skip NeoForge
-                    loaderSelector.addItem(loader.name.lowercase().capitalize())
-            }
         }
         fun setupMinecraftVersions() {
             val mcVersion = minecraftVersion.selectedItem
@@ -116,7 +110,7 @@ fun main() {
                 enableOptions(false)
                 val selectedMcVersion = minecraftVersion.selectedItem as String
                 val selectedPackVersion = packVersion.selectedItem as String
-                val selectedLoader = Loader.valueOf((loaderSelector.selectedItem as String).uppercase())
+                val selectedLoader = Loader.FABRIC
                 val destinationPath = Path(installationDir.text)
                 if (!destinationPath.isDirectory()) {
                     if (destinationPath.exists()) {
@@ -138,7 +132,7 @@ fun main() {
                             ?.get(selectedLoader)
                             ?.install(destinationPath, JProgressBarProgressHandler(installProgress))
                             ?: throw IllegalStateException(
-                                "Couldn't find pack version $selectedPackVersion for $selectedMcVersion with loader $selectedLoader"
+                                "Couldn't find pack version $selectedPackVersion for $selectedMcVersion"
                             )
                         null
                     } catch (t: Throwable) {
@@ -168,7 +162,6 @@ fun main() {
         enableOptions = {
             minecraftVersion.isEnabled = it
             packVersion.isEnabled = it
-            loaderSelector.isEnabled = it
             installationDir.isEnabled = it
             browseButton.isEnabled = it
             install.isEnabled = it
@@ -189,7 +182,6 @@ fun main() {
             add(Box.createVerticalStrut(15))
             add(packVersion.withLabel(I18N.getString("pack.version")))
             add(Box.createVerticalStrut(5))
-            add(loaderSelector.withLabel(I18N.getString("mod.loader")))
             add(Box.createVerticalStrut(15))
             add(JPanel().apply {
                 layout = BoxLayout(this, BoxLayout.LINE_AXIS)
