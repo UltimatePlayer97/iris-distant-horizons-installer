@@ -37,6 +37,15 @@ To celebrate the release of Distant Horizons 2.3, we have partnered up with Spar
 [![banner](https://github.com/user-attachments/assets/d88729ec-aa1d-4bff-9455-26b2752b84c7)](https://billing.sparkedhost.com/aff.php?aff=2767)
 ---
 
+### Hey you, yeah you! This information is important regarding memory allocation to Minecraft, so please take the time to read it.
+Changing the amount of memory given to Minecraft is always a good idea, especially if using Distant Horizons, so here is the necessary info regarding it.
+ * `2G` - No a good idea  - This will most likely crash your game, don't bother.
+  * `4G` - Minimum - Things will stutter slightly, although anything below 256 chunks should be fine.
+  * `6G` - Recommended - This is the optimum amount of RAM for Distant Horizons. This should be perfectly fine for playing with no to 20 light mods.
+  * `10G` - Careful - This much RAM can sometimes be a bad thing for the Java Garbage Collector. Only use this if you are using a heavy terrain generation mod such as JJThunder To The Max or Big Globe.
+
+`G` refers to `GB` or `Gigabytes` of RAM, we use the term `G` as that is what you must put inside memory allocation tab of the installer or else it will not work!
+
 ## Features
 - Support for multiple Minecraft versions.
 - Integration with [Modrinth](https://modrinth.com/) for fetching modpack updates.
