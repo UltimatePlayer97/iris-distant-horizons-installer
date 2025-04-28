@@ -19,7 +19,10 @@ import kotlin.io.path.*
 private val logger = KotlinLogging.logger {}
 
 class PackInstaller(
-    private val packVersion: PackVersion, private val destination: Path, private val progressHandler: ProgressHandler
+    private val packVersion: PackVersion,
+    private val javaArgs: String,
+    private val destination: Path,
+    private val progressHandler: ProgressHandler
 ) : AutoCloseable {
     companion object {
         const val YOSBR_ID = "WwbubTsV"
@@ -81,6 +84,9 @@ class PackInstaller(
         if ("type" !in profile) {
             profile["type"] = "custom"
         }
+        profile["javaArgs"] =
+            "-Xmx$javaArgs -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M"
+
         launcherProfiles["profiles"].asJsonObject.add(packVersion.launcherProfileId, profile)
 
         progressHandler.newTask(I18N.getString("writing.launcher.profiles.json"))

@@ -29,8 +29,13 @@ class PackVersion(val modpack: Modpack, val data: JsonObject) {
     val launcherVersionId = "${modpack.id}-$packVersion-$gameVersion-$loader"
     val launcherProfileId = "${modpack.id}-$gameVersion-$loader"
 
-    fun install(destination: Path, progressHandler: ProgressHandler) =
-        PackInstaller(this, destination, progressHandler)
-            .use(PackInstaller::install)
+    fun install(destination: Path, javaArgs: String, progressHandler: ProgressHandler) {
+        PackInstaller(
+            packVersion = this,
+            destination = destination,
+            progressHandler = progressHandler,
+            javaArgs = javaArgs
+        ).use(PackInstaller::install)
+    }
 }
 

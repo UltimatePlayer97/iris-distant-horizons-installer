@@ -54,6 +54,7 @@ fun main() {
 
         val minecraftVersion = JComboBox<String>()
         val packVersion = JComboBox<String>()
+        val memoryAllocation = JTextField("4G")
 
         minecraftVersion.apply {
             addItemListener {
@@ -112,6 +113,7 @@ fun main() {
                 val selectedPackVersion = packVersion.selectedItem as String
                 val selectedLoader = Loader.FABRIC
                 val destinationPath = Path(installationDir.text)
+                val userMemoryAllocation = memoryAllocation.text // Get user input dynamically
                 if (!destinationPath.isDirectory()) {
                     if (destinationPath.exists()) {
                         JOptionPane.showMessageDialog(
@@ -130,7 +132,7 @@ fun main() {
                         selectedPack.versions[selectedMcVersion]
                             ?.get(selectedPackVersion)
                             ?.get(selectedLoader)
-                            ?.install(destinationPath, JProgressBarProgressHandler(installProgress))
+                            ?.install(destinationPath, userMemoryAllocation, JProgressBarProgressHandler(installProgress)) // Pass memory allocation
                             ?: throw IllegalStateException(
                                 "Couldn't find pack version $selectedPackVersion for $selectedMcVersion"
                             )
@@ -167,6 +169,7 @@ fun main() {
             install.isEnabled = it
         }
 
+
         contentPane = JPanel().apply {
             layout = BoxLayout(this, BoxLayout.PAGE_AXIS)
             border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
@@ -182,6 +185,12 @@ fun main() {
             add(Box.createVerticalStrut(15))
             add(packVersion.withLabel(I18N.getString("pack.version")))
             add(Box.createVerticalStrut(5))
+            add(Box.createVerticalStrut(15))
+            add(JPanel().apply {
+                layout = BoxLayout(this, BoxLayout.LINE_AXIS)
+                add(JLabel(I18N.getString("memory.allocation")))
+                add(memoryAllocation)
+            })
             add(Box.createVerticalStrut(15))
             add(JPanel().apply {
                 layout = BoxLayout(this, BoxLayout.LINE_AXIS)
