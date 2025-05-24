@@ -1,0 +1,34 @@
+name: Update Total Download Badge
+
+on:
+  schedule:
+    - cron: '0 */24 * * *'
+  workflow_dispatch:
+
+jobs:
+  count-downloads:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch all releases
+        id: get-count
+        run: |
+          curl -s https://api.github.com/repos/${{ github.repository }}/releases?per_page=100 > releases.json
+          TOTAL=$(jq '[.[].assets[]?.download_count] | add' releases.json)
+          mkdir -p .badges
+          echo '{
+            "schemaVersion": 1,
+            "label": "total downloads",
+            "message": "'"$TOTAL"'",
+            "color": "blue"
+          }' > .badges/total_downloads.json
+
+      - name: Commit badge
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .badges/total_downloads.json
+          git commit -m "Update total download badge"
+          git push
