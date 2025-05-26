@@ -3,6 +3,9 @@
 ![Total Downloads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/UltimatePlayer97/iris-distant-horizons-installer/refs/heads/master/.badges/total_downloads.json)
 ![Commit History](https://img.shields.io/github/commit-activity/t/UltimatePlayer97/iris-distant-horizons-installer)
 
+![GitHub License](https://img.shields.io/github/license/UltimatePlayer97/iris-distant-horizons-installer)
+![GitHub Stars](https://img.shields.io/github/stars/UltimatePlayer97/iris-distant-horizons-installer)
+
 <a href="https://modrinth.com/modpack/additive">
 <img alt="additive" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/built-with/additive_vector.svg">
 </a>
