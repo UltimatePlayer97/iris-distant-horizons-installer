@@ -2,6 +2,8 @@
 
 ![Total Downloads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/UltimatePlayer97/iris-distant-horizons-installer/refs/heads/master/.badges/total_downloads.json)
 ![Commit History](https://img.shields.io/github/commit-activity/t/UltimatePlayer97/iris-distant-horizons-installer)
+![Repo Size](https://img.shields.io/github/repo-size/UltimatePlayer97/iris-distant-horizons-installer)
+![File count](https://img.shields.io/github/directory-file-count/UltimatePlayer97/iris-distant-horizons-installer)
 
 ![GitHub License](https://img.shields.io/github/license/UltimatePlayer97/iris-distant-horizons-installer)
 ![GitHub Stars](https://img.shields.io/github/stars/UltimatePlayer97/iris-distant-horizons-installer)
