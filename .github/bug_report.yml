@@ -1,0 +1,60 @@
+name: Bug Report
+description: Report a problem with the installer
+title: "[Bug] <brief summary>"
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the form below clearly.
+
+  - type: input
+    id: version
+    attributes:
+      label: App Version
+      description: What version of the installer are you using?
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: Include OS name and version
+      placeholder: e.g. Windows 11 24H2 / Arch Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: describe
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly.
+      placeholder: Tell us what you expected and what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Screenshots
+      description: Paste error logs or drag images here.
+      placeholder: Include any relevant terminal output or screenshots.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked for existing issues
+          required: true
+        - label: I am using the latest version
+          required: true
