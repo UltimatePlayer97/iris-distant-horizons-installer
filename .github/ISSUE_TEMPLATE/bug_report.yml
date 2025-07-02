@@ -8,11 +8,20 @@ body:
       value: |
         Thanks for reporting a bug! Please fill out the form below clearly.
 
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked for existing issues
+          required: true
+        - label: I am using the latest version
+          required: true
+
   - type: input
     id: version
     attributes:
       label: App Version
-      description: What version of the installer are you using?
     validations:
       required: true
 
@@ -48,13 +57,3 @@ body:
       label: Relevant Logs or Screenshots
       description: Paste error logs or drag images here.
       placeholder: Include any relevant terminal output or screenshots.
-
-  - type: checkboxes
-    id: confirmation
-    attributes:
-      label: Checklist
-      options:
-        - label: I have checked for existing issues
-          required: true
-        - label: I am using the latest version
-          required: true
