@@ -1,0 +1,45 @@
+name: 🪲 Bug Report
+description: Report a bug or crash in the modpack
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out all the fields below so we can help you faster.
+
+  - type: input
+    id: version
+    attributes:
+      label: Modpack Version
+      description: What version of the modpack are you using?
+      placeholder: e.g., 0.2.2+1.21.1.fabric
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: other-mods
+    attributes:
+      label: Do you have other mods installed?
+      description: Tick the box if you’ve added any mods yourself besides the base pack.
+      options:
+        - label: Yes, I have other mods installed
+          required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Crash Report / Logs
+      description: |
+        Please upload your log or crash report to [https://mclo.gs](https://mclo.gs) and paste the link below.
+      placeholder: https://mclo.gs/your-log-id
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what happened and how to reproduce the issue.
+      placeholder: e.g., Game crashes when opening inventory
+    validations:
+      required: true
